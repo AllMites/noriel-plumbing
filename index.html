@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noriel Plumbing | Trusted Local Trade Services</title>
+
+    <!-- Google Fonts: Sturdy local-friendly heading font paired with highly legible UI body font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- ======================================================================= -->
+    <!-- === EDIT HERE === -->
+    <!-- INSTRUCTIONS: 
+         This SITE_CONFIG object is the source of truth for design, layout, 
+         and content. Changing these values or using the {{TOKEN}} replacement 
+         pipeline will instantly reskin the entire page.
+    -->
+    <script>
+        const SITE_CONFIG = {
+            theme: {
+                // "plumber"     -> Rounded corners, friendly aesthetic, warm terracotta/navy palette
+                // "electrician" -> Sharp corners, raw industrial aesthetic, deep steel/safety yellow palette
+                tradeStyle: "plumber",
+                colors: {
+                    background: "#FAF9F6",       // Plumber: #FAF9F6 (Parchment) | Electrician: #0F172A (Deep Slate)
+                    text: "#1B2A4A",           // Plumber: #1B2A4A (Deep Navy) | Electrician: #F8FAFC (Ice White)
+                    accent: "#E2583E",       // Plumber: #E2583E (Copper/Rust) | Electrician: #FACC15 (Safety Yellow)
+                    surface: "#EAE6DF",     // Plumber: #EAE6DF (Warm Stone)  | Electrician: #1E293B (Steel Slate)
+                    border: "#D2CAC0",       // Plumber: #D2CAC0 (Soft Muted)  | Electrician: #334155 (Grid Border)
+                    emergency: "#E2583E"  // High contrast background for the critical banner
+                },
+                fonts: {
+                    heading: "'Sora', sans-serif",     // Sora (Sturdy Sans)
+                    body: "'Outfit', sans-serif"            // Outfit (Modern Readable Sans)
+                }
+            },
+            hero: {
+                businessName: "Noriel Plumbing",
+                tagline: "Mabilis, Matapat, at Maaasahang Tubero sa Parañaque",
+                phone: "+63 917 888 1234",
+                backgroundImage: "https://placehold.co/1920x1080/1B2A4A/FAF9F6?text=Professional+Plumbing+Service",
+                ctaText: "Call Now: +63 917 888 1234"
+            },
+            services: [
+                { icon: "🚰", name: "Emergency Pipe Leak Repairs", desc: "Rapid response diagnostic and repairs for bursting or leaking pipes across NCR." },
+                { icon: "🚽", name: "Toilet & Sink Declogging", desc: "Eco-friendly, mechanical declogging without damaging your residential drainage systems." },
+                { icon: "🚿", name: "Water Heater Installation", desc: "Safe setup of multi-point and single-point bathroom heating systems." },
+                { icon: "💦", name: "Water Pump Services", desc: "Installation, preventative maintenance, and motor rewinding for home booster pumps." },
+                { icon: "🧺", name: "Grease Trap Cleaning", desc: "Commercial and residential grease trap cleaning for food businesses and kitchens." },
+                { icon: "🏠", name: "Complete Re-Piping", desc: "Whole-house replacement from old rusted galvanized pipes to premium PPR pipelines." }
+            ],
+            about: {
+                text: "Kanto Plumbing began on a neighborhood street corner in BF Homes, Parañaque. We realized local families were tired of hard-to-reach, unreliable services. Today, we bring expert, licensed plumbing solutions straight to your doorstep with honest pricing and zero shortcuts.",
+                yearsInBusiness: "8+ Years of Local Service",
+                image: "https://placehold.co/800x1000/1B2A4A/FAF9F6?text=Reliable+Local+Plumbing+Team"
+            },
+            trust: [
+                { icon: "🛡️", label: "Licensed & Insured" },
+                { icon: "🏠", label: "100% Parañaque Owned" },
+                { icon: "🤝", label: "Service Warranty Included" }
+            ],
+            serviceArea: {
+                title: "Barangays We Serve",
+                cities: "BF Homes, Don Bosco, Sun Valley, Moonwalk, San Antonio, Marcelo Green, Baclaran, Tambo, Sto. Niño",
+                mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.0605988168273!2d121.0189!3d14.4526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDI3JzA5LjQiTiAxMjHCsDAxJzA4LjAiRQ!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph"
+            },
+            gallery: [
+                "https://placehold.co/600x600/EAE6DF/1B2A4A?text=Before:+Rusty+Pipes",
+                "https://placehold.co/600x600/1B2A4A/FAF9F6?text=After:+New+PPR+Pipes",
+                "https://placehold.co/600x600/EAE6DF/1B2A4A?text=Before:+Drainage+Clog",
+                "https://placehold.co/600x600/1B2A4A/FAF9F6?text=After:+Clear+Drain",
+                "https://placehold.co/600x600/EAE6DF/1B2A4A?text=Pump+Restoration",
+                "https://placehold.co/600x600/1B2A4A/FAF9F6?text=Bathroom+Remap"
+            ],
+            galleryLabels: [
+                "Plumbing Pipeline Layout",
+                "Leak Detection Inspection",
+                "Booster Pump Restoration",
+                "Main Drain Clearout",
+                "Bathroom Fittings Finish",
+                "Residential Supply Line Map"
+            ],
+            galleryTitle: "Recent Work",
+            gallerySubtitle: "See our real, completed projects and local installations in Parañaque.",
+            testimonials: [
+                { quote: "Mabilis dumating nung nagkaroon kami ng tagas sa banyo hatinggabi. Very professional at malinis magtrabaho!", name: "Maria S.", location: "BF Homes, Parañaque", stars: 5 },
+                { quote: "Highly recommended! Sila lang ang nakahanap ng leak sa ilalim ng sahig namin na matagal nang problema.", name: "Robert C.", location: "Don Bosco, Parañaque", stars: 5 },
+                { quote: "Subok na maaasahan. Clear ang quotation bago simulan ang gawa, walang sorpresang extra charges.", name: "Elena G.", location: "San Antonio, Parañaque", stars: 5 }
+            ],
+            emergency: {
+                phone: "+63 917 888 1234",
+                hours: "24/7",
+                showBanner: true
+            },
+            contact: {
+                address: "Aguirre Ave Cor El Grande, BF Homes, Parañaque, Metro Manila",
+                phone: "+63 917 888 1234",
+                whatsapp: "https://wa.me/639178881234",
+                facebook: "https://facebook.com/kantoplumbing",
+                instagram: "https://instagram.com/kantoplumbing"
+            },
+            footer: {
+                copyright: "Noriel Plumbing Services"
+            }
+        };
+
+        // DEFAULT STANDALONE MOCK DATA (Fallback if automation / Node run is bypassed)
+        // Ensures portfolio-ready render instantly on double click
+        const DEFAULT_FALLBACKS = {
+            "plumber": "plumber",
+            "#FAF9F6": "#FAF9F6",
+            "#1B2A4A": "#1B2A4A",
+            "#E2583E": "#E2583E",
+            "#EAE6DF": "#EAE6DF",
+            "#D2CAC0": "#D2CAC0",
+            "#E2583E": "#E2583E",
+            "'Sora', sans-serif": "'Sora', sans-serif",
+            "'Outfit', sans-serif": "'Outfit', sans-serif",
+            "Noriel Plumbing": "Kanto Plumbing & Repair",
+            "Mabilis, Matapat, at Maaasahang Tubero sa Parañaque": "Mabilis, Matapat, at Maaasahang Tubero sa Parañaque",
+            "+63 917 888 1234": "+63 917 888 1234",
+            "https://placehold.co/1920x1080/1B2A4A/FAF9F6?text=Professional+Plumbing+Service": "https://placehold.co/1920x1080/1B2A4A/FAF9F6?text=Para%C3%B1aque+Professional+Plumbing+Service",
+            "Call Now: +63 917 888 1234": "Call Now: +63 917 888 1234",
+            "🚰": "🚰", "Emergency Pipe Leak Repairs": "Emergency Pipe Leak Repairs", "Rapid response diagnostic and repairs for bursting or leaking pipes across NCR.": "Rapid response diagnostic and repairs for bursting or leaking pipes across NCR.",
+            "🚽": "🚽", "Toilet & Sink Declogging": "Toilet & Sink Declogging", "Eco-friendly, mechanical declogging without damaging your residential drainage systems.": "Eco-friendly, mechanical declogging without damaging your residential drainage systems.",
+            "🚿": "🚿", "Water Heater Installation": "Water Heater Installation", "Safe setup of multi-point and single-point bathroom heating systems.": "Safe setup of multi-point and single-point bathroom heating systems.",
+            "💦": "💦", "Water Pump Services": "Water Pump Services", "Installation, preventative maintenance, and motor rewinding for home booster pumps.": "Installation, preventative maintenance, and motor rewinding for home booster pumps.",
+            "🧺": "🧺", "Grease Trap Cleaning": "Grease Trap Cleaning", "Commercial and residential grease trap cleaning for food businesses and kitchens.": "Commercial and residential grease trap cleaning for food businesses and kitchens.",
+            "🏠": "🏠", "Complete Re-Piping": "Complete Re-Piping", "Whole-house replacement from old rusted galvanized pipes to premium PPR pipelines.": "Whole-house replacement from old rusted galvanized pipes to premium PPR pipelines.",
+            "Kanto Plumbing began on a neighborhood street corner in BF Homes, Parañaque. We realized local families were tired of hard-to-reach, unreliable services. Today, we bring expert, licensed plumbing solutions straight to your doorstep with honest pricing and zero shortcuts.": "Kanto Plumbing began on a neighborhood street corner in BF Homes, Parañaque. We realized local families were tired of hard-to-reach, unreliable services. Today, we bring expert, licensed plumbing solutions straight to your doorstep with honest pricing and zero shortcuts.",
+            "8+ Years of Local Service": "8+ Years of Local Service",
+            "https://placehold.co/800x1000/1B2A4A/FAF9F6?text=Reliable+Local+Plumbing+Team": "https://placehold.co/800x1000/1B2A4A/FAF9F6?text=Reliable+Local+Plumbing+Team",
+            "🛡️": "🛡️", "Licensed & Insured": "Licensed & Insured",
+            "🏠": "🏠", "100% Parañaque Owned": "100% Parañaque Owned",
+            "🤝": "🤝", "Service Warranty Included": "Service Warranty Included",
+            "Barangays We Serve": "Barangays We Serve",
+            "BF Homes, Don Bosco, Sun Valley, Moonwalk, San Antonio, Marcelo Green, Baclaran, Tambo, Sto. Niño": "BF Homes, Don Bosco, Sun Valley, Moonwalk, San Antonio, Marcelo Green, Baclaran, Tambo, Sto. Niño",
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.0605988168273!2d121.0189!3d14.4526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDI3JzA5LjQiTiAxMjHCsDAxJzA4LjAiRQ!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.0605988168273!2d121.0189!3d14.4526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDI3JzA5LjQiTiAxMjHCsDAxJzA4LjAiRQ!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph",
+            "https://placehold.co/600x600/EAE6DF/1B2A4A?text=Before:+Rusty+Pipes": "https://placehold.co/600x600/EAE6DF/1B2A4A?text=Before:+Rusty+Galvanized+Pipes",
+            "https://placehold.co/600x600/1B2A4A/FAF9F6?text=After:+New+PPR+Pipes": "https://placehold.co/600x600/1B2A4A/FAF9F6?text=After:+New+Seamless+PPR+Pipes",
+            "https://placehold.co/600x600/EAE6DF/1B2A4A?text=Before:+Drainage+Clog": "https://placehold.co/600x600/EAE6DF/1B2A4A?text=Before:+Severe+Drainage+Clog",
+            "https://placehold.co/600x600/1B2A4A/FAF9F6?text=After:+Clear+Drain": "https://placehold.co/600x600/1B2A4A/FAF9F6?text=After:+Crystal+Clear+Flowing+Drain",
+            "https://placehold.co/600x600/EAE6DF/1B2A4A?text=Pump+Restoration": "https://placehold.co/600x600/EAE6DF/1B2A4A?text=Booster+Pump+Restoration",
+            "https://placehold.co/600x600/1B2A4A/FAF9F6?text=Bathroom+Remap": "https://placehold.co/600x600/1B2A4A/FAF9F6?text=Modern+Bathroom+Remap",
+            "Plumbing Pipeline Layout": "Plumbing Pipeline Layout",
+            "Leak Detection Inspection": "Leak Detection Inspection",
+            "Booster Pump Restoration": "Booster Pump Restoration",
+            "Main Drain Clearout": "Main Drain Clearout",
+            "Bathroom Fittings Finish": "Bathroom Fittings Finish",
+            "Residential Supply Line Map": "Residential Supply Line Map",
+            "Recent Work": "Recent Work",
+            "See our real, completed projects and local installations in Parañaque.": "See our real, completed projects and local installations in Parañaque.",
+            "Mabilis dumating nung nagkaroon kami ng tagas sa banyo hatinggabi. Very professional at malinis magtrabaho!": "Mabilis dumating nung nagkaroon kami ng tagas sa banyo hatinggabi. Very professional at malinis magtrabaho!",
+            "Maria S.": "Maria S.",
+            "BF Homes, Parañaque": "BF Homes, Parañaque",
+            "Highly recommended! Sila lang ang nakahanap ng leak sa ilalim ng sahig namin na matagal nang problema.": "Highly recommended! Sila lang ang nakahanap ng leak sa ilalim ng sahig namin na matagal nang problema.",
+            "Robert C.": "Robert C.",
+            "Don Bosco, Parañaque": "Don Bosco, Parañaque",
+            "Subok na maaasahan. Clear ang quotation bago simulan ang gawa, walang sorpresang extra charges.": "Subok na maaasahan. Clear ang quotation bago simulan ang gawa, walang sorpresang extra charges.",
+            "Elena G.": "Elena G.",
+            "San Antonio, Parañaque": "San Antonio, Parañaque",
+            "+63 917 888 1234": "+63 917 888 1234",
+            "24/7": "24/7",
+            "Aguirre Ave Cor El Grande, BF Homes, Parañaque, Metro Manila": "Aguirre Ave Cor El Grande, BF Homes, Parañaque, Metro Manila",
+            "+63 917 888 1234": "+63 917 888 1234",
+            "https://wa.me/639178881234": "https://wa.me/639178881234",
+            "https://facebook.com/kantoplumbing": "https://facebook.com/kantoplumbing",
+            "https://instagram.com/kantoplumbing": "https://instagram.com/kantoplumbing",
+            "Noriel Plumbing Services": "Kanto Plumbing & Repair Services"
+        };
+
+        // Fallback execution to support clean browser preview
+        Object.keys(SITE_CONFIG).forEach(key => {
+            const val = SITE_CONFIG[key];
+            if (typeof val === 'string' && val.startsWith('{{')) {
+                SITE_CONFIG[key] = DEFAULT_FALLBACKS[val] || '';
+            } else if (typeof val === 'object' && val !== null) {
+                Object.keys(val).forEach(subKey => {
+                    if (typeof val[subKey] === 'string' && val[subKey].startsWith('{{')) {
+                        val[subKey] = DEFAULT_FALLBACKS[val[subKey]] || '';
+                    } else if (typeof val[subKey] === 'object' && val[subKey] !== null) {
+                        Object.keys(val[subKey]).forEach(deepKey => {
+                            if (typeof val[subKey][deepKey] === 'string' && val[subKey][deepKey].startsWith('{{')) {
+                                val[subKey][deepKey] = DEFAULT_FALLBACKS[val[subKey][deepKey]] || '';
+                            }
+                        });
+                    }
+                });
+            }
+        });
+
+        // Array fallbacks helper
+        ['services', 'trust', 'gallery', 'galleryLabels', 'testimonials'].forEach(arrKey => {
+            SITE_CONFIG[arrKey] = SITE_CONFIG[arrKey].map(item => {
+                if (typeof item === 'string' && item.startsWith('{{')) {
+                    return DEFAULT_FALLBACKS[item] || '';
+                } else if (typeof item === 'object') {
+                    const cleanObj = {};
+                    Object.keys(item).forEach(k => {
+                        cleanObj[k] = (typeof item[k] === 'string' && item[k].startsWith('{{')) ? DEFAULT_FALLBACKS[item[k]] : item[k];
+                    });
+                    return cleanObj;
+                }
+                return item;
+            });
+        });
+    </script>
+    <!-- === END EDIT HERE === -->
+    <!-- ======================================================================= -->
+
+    <!-- STRUCTURAL & LAYOUT ENGINE (Do not edit directly) -->
+    <style>
+        /* Prevent FOUC */
+        body {
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        body.ready {
+            opacity: 1;
+        }
+
+        /* Base Variables - Injected via JS at runtime */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --accent-color: #ff0000;
+            --surface-color: #f1f1f1;
+            --border-color: #cccccc;
+            --emergency-bg: #ff0000;
+            --font-heading: sans-serif;
+            --font-body: sans-serif;
+
+            /* Dynamic Structural styling defined by tradeStyle */
+            --radius-ui: 0px;
+            --accent-glow: 0 0 0px transparent;
+            --bg-pattern: none;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: var(--bg-pattern);
+            background-size: 30px 30px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-heading {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Container Rules */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 6%;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+            margin-bottom: 3.5rem;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 70px;
+            height: 6px;
+            background-color: var(--accent-color);
+        }
+
+        /* Buttons & Badges */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 1.1rem 2.2rem;
+            border: none;
+            cursor: pointer;
+            border-radius: var(--radius-ui);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            font-family: var(--font-heading);
+            box-shadow: var(--accent-glow);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.95;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--text-color);
+            color: var(--text-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        /* Sticky Navbar */
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        #navbar.scrolled {
+            background-color: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hamburger & Overlay */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 2000;
+            position: relative;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background-color: var(--text-color);
+            margin: 6px 0;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        /* Responsive Overlay Menu */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-color);
+            z-index: 1500;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-nav.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .mobile-nav a {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        /* Hero */
+        #hero {
+            height: 100vh;
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(75deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.65) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            max-width: 750px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.8rem, 7vw, 5.2rem);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* Emergency Banner */
+        #emergency-banner {
+            background-color: var(--emergency-bg);
+            color: #ffffff;
+            padding: 1.2rem 0;
+            text-align: center;
+            font-family: var(--font-heading);
+            z-index: 900;
+            border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .emergency-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            font-size: clamp(1.05rem, 2vw, 1.3rem);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Services Grid */
+        #services {
+            background-color: var(--surface-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--bg-color);
+            padding: 3rem 2rem;
+            border-radius: var(--radius-ui);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            border-color: var(--accent-color);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            background: var(--surface-color);
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-ui);
+            border: 1px solid var(--border-color);
+        }
+
+        .service-name {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+
+        .service-desc {
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        /* About & Trust Badges */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            border-radius: var(--radius-ui);
+            border: 1px solid var(--border-color);
+        }
+
+        .about-meta {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.5rem 0;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-family: var(--font-heading);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+        }
+
+        .trust-badge {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .trust-icon {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+        }
+
+        .trust-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        /* Service Area */
+        #service-area {
+            background-color: var(--surface-color);
+        }
+
+        .area-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: stretch;
+            border-radius: var(--radius-ui);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .area-details {
+            background-color: var(--bg-color);
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .area-callout {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            font-family: var(--font-heading);
+        }
+
+        .area-list {
+            margin: 1.5rem 0;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        .area-map {
+            position: relative;
+            min-height: 400px;
+        }
+
+        .area-map iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Projects / Before & After Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            border-radius: var(--radius-ui);
+            border: 1px solid var(--border-color);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
+            padding: 2rem 1.5rem 1.5rem;
+            color: #ffffff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-title {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        /* Testimonials */
+        #testimonials {
+            background-color: var(--surface-color);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--bg-color);
+            padding: 3rem 2.5rem;
+            border-radius: var(--radius-ui);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            justify-content: space-between;
+        }
+
+        .stars {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        .testimonial-quote {
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-client {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .client-name {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .client-loc {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer-socials a {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--bg-color);
+            padding-bottom: 2px;
+            transition: color 0.2s;
+        }
+
+        .footer-socials a:hover {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .footer-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-group h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            opacity: 0.6;
+        }
+
+        .contact-group p,
+        .contact-group a {
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+
+        /* Animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+
+            .about-grid,
+            .area-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .area-details {
+                padding: 3rem;
+            }
+
+            .gallery-grid,
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            #navbar .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .gallery-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            #emergency-banner {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1001;
+            }
+
+            body {
+                padding-bottom: 60px;
+                /* Space for emergency banner sticky layout */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Overlay Navigation Panel (Mobile Only) -->
+    <div id="mobile-navigation" class="mobile-nav">
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#service-area" class="mobile-link">Service Area</a>
+        <a href="#gallery" class="mobile-link">Projects</a>
+        <a href="#contact-anchor" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Header Navigation -->
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo font-heading">
+                <span id="nav-icon-block"></span>
+                <span id="dom-nav-brand"></span>
+            </a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#service-area">Service Area</a>
+                <a href="#gallery">Projects</a>
+                <a href="#contact-anchor" class="btn btn-outline" style="padding: 0.6rem 1.2rem;">Contact</a>
+            </div>
+            <button id="menu-burger" class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Area -->
+    <section id="hero">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="hero-content fade-up">
+                <h1 id="dom-hero-title" class="hero-title font-heading"></h1>
+                <p id="dom-hero-tagline" class="hero-tagline"></p>
+                <a id="dom-hero-cta" href="tel:" class="btn"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Action Strip -->
+    <div id="emergency-banner" style="display: none;">
+        <div class="container">
+            <div class="emergency-inner">
+                <span>🚨 Emergency Service Active</span>
+                <a id="dom-emergency-tel" href="tel:">CALL: </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Service Cards -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title font-heading fade-up">Our Services</h2>
+            <div id="dom-services-grid" class="services-grid">
+                <!-- Dynamically Populated with Cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Company Trust Metrics -->
+    <section id="about" class="section container">
+        <div class="about-grid">
+            <div class="about-img-box fade-up">
+                <img id="dom-about-img" class="about-image" src="" alt="Professional Crew">
+            </div>
+            <div class="fade-up">
+                <h2 class="section-title font-heading">Who We Are</h2>
+                <p id="dom-about-text" style="font-size: 1.15rem; margin-bottom: 1.5rem;"></p>
+                <div id="dom-about-badge" class="about-meta"></div>
+
+                <div id="dom-trust-grid" class="trust-grid">
+                    <!-- Dynamic Badges -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geographical Service Boundaries -->
+    <section id="service-area" class="section">
+        <div class="container">
+            <div class="area-grid">
+                <div class="area-details fade-up">
+                    <span class="area-callout">On-Site Dispatch</span>
+                    <h2 id="dom-area-title" class="font-heading"
+                        style="font-size: 2.2rem; text-transform: uppercase; margin-bottom: 1rem;"></h2>
+                    <p style="opacity: 0.8; margin-bottom: 1rem;">We provide fast home repairs and diagnostic services
+                        right to your doorstep across:</p>
+                    <div id="dom-area-cities" class="area-list font-heading"></div>
+                    <div>
+                        <a href="#contact-anchor" class="btn">Verify Your Location</a>
+                    </div>
+                </div>
+                <div class="area-map fade-up">
+                    <iframe id="dom-map-iframe" src="" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Portfolio Showcase -->
+    <section id="gallery" class="section container">
+        <h2 id="dom-gallery-title" class="section-title font-heading fade-up">Recent Work</h2>
+        <p id="dom-gallery-subtitle" class="fade-up"
+            style="opacity: 0.7; margin-top: -2.5rem; margin-bottom: 3.5rem; font-size: 1.1rem;">See our real, completed
+            projects and local installations in Parañaque.</p>
+        <div id="dom-gallery-grid" class="gallery-grid">
+            <!-- Dynamic project items loaded here -->
+        </div>
+    </section>
+
+    <!-- Verified Customer Endorsements -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2 class="section-title font-heading fade-up">Feedback from Neighbors</h2>
+            <div id="dom-testimonials-grid" class="testimonials-grid">
+                <!-- Injected with client quotes -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Map anchor point -->
+    <span id="contact-anchor"></span>
+    <footer>
+        <div class="container">
+            <div class="footer-grid fade-up">
+                <div>
+                    <div id="dom-footer-logo" class="footer-logo font-heading"></div>
+                    <p style="opacity: 0.7; max-width: 480px; margin-bottom: 2rem;">Professional maintenance built on
+                        word-of-mouth recommendations, quality tools, and local service warranties.</p>
+                    <div class="footer-socials">
+                        <a id="dom-social-fb" href="#" target="_blank">Facebook</a>
+                        <a id="dom-social-ig" href="#" target="_blank">Instagram</a>
+                        <a id="dom-social-wa" href="#" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+                <div class="footer-contact-info">
+                    <div class="contact-group">
+                        <h4>Office Location</h4>
+                        <p id="dom-footer-address"></p>
+                    </div>
+                    <div class="contact-group">
+                        <h4>Contact Numbers</h4>
+                        <a id="dom-footer-phone" href=""></a>
+                    </div>
+                    <div class="contact-group">
+                        <h4>Viber / WhatsApp</h4>
+                        <a id="dom-footer-wa" href="" target="_blank">Message Support Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="dom-copyright"></p>
+                <p>Designed and Built in Metro Manila</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- RENDERING SYSTEM -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const conf = SITE_CONFIG;
+
+            // 1. Dynamic Design Switching (Plumber vs Electrician UI Rules)
+            const root = document.documentElement;
+            root.style.setProperty('--bg-color', conf.theme.colors.background);
+            root.style.setProperty('--text-color', conf.theme.colors.text);
+            root.style.setProperty('--accent-color', conf.theme.colors.accent);
+            root.style.setProperty('--surface-color', conf.theme.colors.surface);
+            root.style.setProperty('--border-color', conf.theme.colors.border);
+            root.style.setProperty('--emergency-bg', conf.theme.colors.emergency);
+            root.style.setProperty('--font-heading', conf.theme.fonts.heading);
+            root.style.setProperty('--font-body', conf.theme.fonts.body);
+
+            // Handle industrial visual characteristics based on choice
+            if (conf.theme.tradeStyle.toLowerCase() === "electrician") {
+                root.style.setProperty('--radius-ui', '0px');
+                root.style.setProperty('--accent-glow', '0 0 15px rgba(250, 204, 21, 0.3)');
+                // Add a cool raw subtle industrial grid pattern for Electricians
+                root.style.setProperty('--bg-pattern', `radial-gradient(${conf.theme.colors.border} 1px, transparent 1px)`);
+                document.getElementById('nav-icon-block').textContent = "⚡";
+            } else {
+                root.style.setProperty('--radius-ui', '12px');
+                root.style.setProperty('--accent-glow', 'none');
+                // Subtle soft diagonal architectural line pattern for Plumbers
+                root.style.setProperty('--bg-pattern', 'none');
+                document.getElementById('nav-icon-block').textContent = "🔧";
+            }
+
+            // 2. Population logic
+            document.getElementById('dom-nav-brand').textContent = conf.hero.businessName;
+
+            // Hero Block
+            const heroSec = document.getElementById('hero');
+            heroSec.style.backgroundImage = `url('${conf.hero.backgroundImage}')`;
+            document.getElementById('dom-hero-title').textContent = conf.hero.businessName;
+            document.getElementById('dom-hero-tagline').textContent = conf.hero.tagline;
+
+            const mainCta = document.getElementById('dom-hero-cta');
+            mainCta.textContent = conf.hero.ctaText || `Call Now: ${conf.hero.phone}`;
+            mainCta.href = `tel:${conf.hero.phone.replace(/[^0-9+]/g, '')}`;
+
+            // Emergency Active Banner
+            if (conf.emergency.showBanner) {
+                const banner = document.getElementById('emergency-banner');
+                banner.style.display = "block";
+                const telLink = document.getElementById('dom-emergency-tel');
+                telLink.textContent = `Dial ${conf.emergency.phone} (${conf.emergency.hours})`;
+                telLink.href = `tel:${conf.emergency.phone.replace(/[^0-9+]/g, '')}`;
+            }
+
+            // Populating Grid Cards (Services)
+            const serviceGrid = document.getElementById('dom-services-grid');
+            conf.services.forEach(srv => {
+                const card = document.createElement('div');
+                card.className = "service-card fade-up";
+                card.innerHTML = `
+                    <div class="service-icon">${srv.icon}</div>
+                    <h3 class="service-name font-heading">${srv.name}</h3>
+                    <p class="service-desc">${srv.desc}</p>
+                `;
+                serviceGrid.appendChild(card);
+            });
+
+            // About Block 
+            document.getElementById('dom-about-text').textContent = conf.about.text;
+            document.getElementById('dom-about-badge').textContent = conf.about.yearsInBusiness;
+            document.getElementById('dom-about-img').src = conf.about.image;
+
+            const trustGrid = document.getElementById('dom-trust-grid');
+            conf.trust.forEach(tr => {
+                const cell = document.createElement('div');
+                cell.className = "trust-badge";
+                cell.innerHTML = `
+                    <div class="trust-icon">${tr.icon}</div>
+                    <div class="trust-label font-heading">${tr.label}</div>
+                `;
+                trustGrid.appendChild(cell);
+            });
+
+            // Geographic Coverage Frame
+            document.getElementById('dom-area-title').textContent = conf.serviceArea.title;
+            document.getElementById('dom-area-cities').textContent = conf.serviceArea.cities;
+            document.getElementById('dom-map-iframe').src = conf.serviceArea.mapEmbedUrl;
+
+            // Gallery Section Setup
+            document.getElementById('dom-gallery-title').textContent = conf.galleryTitle || 'Recent Work';
+            document.getElementById('dom-gallery-subtitle').textContent = conf.gallerySubtitle || 'See our real, completed projects and local installations.';
+
+            const galleryGrid = document.getElementById('dom-gallery-grid');
+            conf.gallery.forEach((url, index) => {
+                const item = document.createElement('div');
+                item.className = "gallery-item fade-up";
+                const label = (conf.galleryLabels && conf.galleryLabels[index]) ? conf.galleryLabels[index] : 'Finished Installation';
+                item.innerHTML = `
+                    <img src="${url}" alt="Work Portfolio Pic">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">${label}</h4>
+                    </div>
+                `;
+                galleryGrid.appendChild(item);
+            });
+
+            // Feedbacks
+            const reviewsGrid = document.getElementById('dom-testimonials-grid');
+            conf.testimonials.forEach(test => {
+                const card = document.createElement('div');
+                card.className = "testimonial-card fade-up";
+
+                let starsString = "";
+                for (let s = 0; s < test.stars; s++) { starsString += "★"; }
+
+                card.innerHTML = `
+                    <div>
+                        <div class="stars">${starsString}</div>
+                        <p class="testimonial-quote">"${test.quote}"</p>
+                    </div>
+                    <div class="testimonial-client">
+                        <span class="client-name font-heading">${test.name}</span>
+                        <span class="client-loc">${test.location}</span>
+                    </div>
+                `;
+                reviewsGrid.appendChild(card);
+            });
+
+            // Footer Mapping
+            document.getElementById('dom-footer-logo').textContent = conf.hero.businessName;
+            document.getElementById('dom-footer-address').textContent = conf.contact.address;
+
+            const footPhone = document.getElementById('dom-footer-phone');
+            footPhone.textContent = conf.contact.phone;
+            footPhone.href = `tel:${conf.contact.phone.replace(/[^0-9+]/g, '')}`;
+
+            document.getElementById('dom-footer-wa').href = conf.contact.whatsapp;
+            document.getElementById('dom-social-fb').href = conf.contact.facebook;
+            document.getElementById('dom-social-ig').href = conf.contact.instagram;
+            document.getElementById('dom-social-wa').href = conf.contact.whatsapp;
+            document.getElementById('dom-copyright').textContent = `© ${new Date().getFullYear()} ${conf.footer.copyright}. All Rights Reserved.`;
+
+            // 3. Header Animation & Style Adjust on Scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 40) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // 4. Burger / Hamburger Interactivity
+            const burger = document.getElementById('menu-burger');
+            const mobileMenu = document.getElementById('mobile-navigation');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                burger.classList.toggle('active');
+                mobileMenu.classList.toggle('open');
+
+                // Burger animation
+                const spans = burger.querySelectorAll('span');
+                if (mobileMenu.classList.contains('open')) {
+                    spans[0].style.transform = "rotate(45deg) translate(6px, 6px)";
+                    spans[1].style.opacity = "0";
+                    spans[2].style.transform = "rotate(-45deg) translate(6px, -7px)";
+                } else {
+                    spans[0].style.transform = "none";
+                    spans[1].style.opacity = "1";
+                    spans[2].style.transform = "none";
+                }
+            }
+
+            burger.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+            // 5. Scroll Visibility Observer
+            const elementObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        elementObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.05, rootMargin: "0px 0px -40px 0px" });
+
+            setTimeout(() => {
+                document.querySelectorAll('.fade-up').forEach(item => elementObserver.observe(item));
+            }, 100);
+
+            // Reveal body after injection
+            requestAnimationFrame(() => {
+                document.body.classList.add('ready');
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- ======================================================================= -->
+<!-- === TOKEN REFERENCE === -->
+<!-- 
+     Use this map list to guide custom replacement keys inside replace.js.
+     All key tokens mapped inside config.json should correlate directly to:
+
+     THEME METRICS:
+     - plumber     : Toggles "plumber" (rounded UI) vs "electrician" (sharp industrial UI).
+     - #FAF9F6        : Page background color hex code.
+     - #1B2A4A      : Text content element color hex code.
+     - #E2583E    : Callout actions/highlights color hex code.
+     - #EAE6DF   : Card backgrounds / off-contrast blocks.
+     - #D2CAC0    : Subtle dividing line separator rules.
+     - #E2583E : High-contrast alert header background hex.
+     - 'Sora', sans-serif    : Heading font family string.
+     - 'Outfit', sans-serif       : Body typography font family string.
+
+     HERO COMPONENT:
+     - Noriel Plumbing    : The business name used across navbar, footer, and main banner.
+     - Mabilis, Matapat, at Maaasahang Tubero sa Parañaque          : Subheading statement describing primary trade capabilities.
+     - +63 917 888 1234            : Contact number displayed in the prominent primary button.
+     - https://placehold.co/1920x1080/1B2A4A/FAF9F6?text=Professional+Plumbing+Service         : Clean high-res placeholder image URL for the main background.
+
+     SERVICE CARD TOKENS:
+     - 🚰 to 🏠 (Unicode / Emoji markers representing service categories)
+     - Emergency Pipe Leak Repairs to Complete Re-Piping
+     - Rapid response diagnostic and repairs for bursting or leaking pipes across NCR. to Whole-house replacement from old rusted galvanized pipes to premium PPR pipelines.
+
+     ABOUT BLOCK:
+     - Kanto Plumbing began on a neighborhood street corner in BF Homes, Parañaque. We realized local families were tired of hard-to-reach, unreliable services. Today, we bring expert, licensed plumbing solutions straight to your doorstep with honest pricing and zero shortcuts.            : Multi-sentence brand narrative focusing on neighborhood location.
+     - 8+ Years of Local Service           : Tag line highlight depicting duration in operational practice.
+     - https://placehold.co/800x1000/1B2A4A/FAF9F6?text=Reliable+Local+Plumbing+Team           : Image representing local service team or workspace.
+
+     TRUST & CONFIDENCE LABELS:
+     - 🛡️ to 🤝
+     - Licensed & Insured to Service Warranty Included
+
+     SERVICE AREA BLOCK:
+     - Barangays We Serve            : Title text declaring target district boundaries.
+     - BF Homes, Don Bosco, Sun Valley, Moonwalk, San Antonio, Marcelo Green, Baclaran, Tambo, Sto. Niño           : Comma-separated list of barangays, villages, or cities serviced.
+     - https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.0605988168273!2d121.0189!3d14.4526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDI3JzA5LjQiTiAxMjHCsDAxJzA4LjAiRQ!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph          : Dynamic Google Maps frame URL used for the right-hand map view.
+
+     GALLERY PORTFOLIO:
+     - https://placehold.co/600x600/EAE6DF/1B2A4A?text=Before:+Rusty+Pipes to https://placehold.co/600x600/1B2A4A/FAF9F6?text=Bathroom+Remap (Image paths displaying live onsite job results)
+
+     REVIEWS & TESTIMONIALS:
+     - Mabilis dumating nung nagkaroon kami ng tagas sa banyo hatinggabi. Very professional at malinis magtrabaho! to Subok na maaasahan. Clear ang quotation bago simulan ang gawa, walang sorpresang extra charges.
+     - Maria S. to Elena G.
+     - BF Homes, Parañaque to San Antonio, Parañaque
+
+     EMERGENCY & CONTACT CHANNELS:
+     - +63 917 888 1234       : Highly visible phone number for emergency/immediate jobs.
+     - 24/7       : Hours available (e.g. 24/7 or 6am-10pm).
+     - Aguirre Ave Cor El Grande, BF Homes, Parañaque, Metro Manila       : Physical business HQ location.
+     - +63 917 888 1234         : Main telephone contact.
+     - https://wa.me/639178881234      : Quick tap-to-viber or wa.me redirect link.
+     - https://facebook.com/kantoplumbing      : Business facebook profile page URL.
+     - https://instagram.com/kantoplumbing     : Business Instagram URL.
+     
+     FOOTER BLOCK:
+     - Noriel Plumbing Services      : Official business legal name for copyright.
+-->
